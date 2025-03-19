@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import { getProductById } from "../services/api";
-import DetailCard from '../components/DetailCard'
+import MediaCard from '../components/MediaCard'
 const ProductDetail = () => {
   const { id } = useParams();
   const { addToCart } = useCart();
@@ -25,11 +25,18 @@ const ProductDetail = () => {
   return (
     <div className="mt-[7%] mx-[40%]">
    
-       <DetailCard 
-                  key={producto.id} 
-                  producto={producto}
-                  addToCart={addToCart} 
-      />
+
+          <MediaCard 
+            key={producto.id} 
+            producto={producto}
+            addToCart={addToCart} 
+            maxWidthCard={500}
+            heightImg={300}
+            btnLookDatail={false}
+          />
+
+
+
     </div>
   );
 };

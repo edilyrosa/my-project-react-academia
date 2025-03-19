@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getProducts } from "../services/api";
 import { useCart } from "../context/CartContext";
-import ProductCard from "../components/ProductCard";
+import MediaCard from "../components/MediaCard";
 
 const Products = () => {
   const [productos, setProductos] = useState([]);
@@ -13,20 +13,25 @@ const Products = () => {
         const data = await getProducts();
         setProductos(data);
       } catch (error) {
-        console.error('HA FALLADO EL FETCH DE PRODUCTOS DESDE Products.js', error.message);
+        console.error(error.message);
       }
     };
     fetchData();
   }, []);
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Nuestros Productos</h1>
+    <div className="container mx-auto p-4 pt-40">
+      <h1 className="text-4xl font-bold mb-4 text-center text-blue-500">Nuestros Productos</h1>
       <div id="pro-contenedor" 
             className='p-4 flex flex-col lg:flex-row gap-[2%] justify-center items-center flex-wrap
             '>
         {productos.map((producto) => (
-          <ProductCard key={producto.id} producto={producto} addToCart={addToCart} />
+          <MediaCard 
+            key={producto.id} 
+            producto={producto}
+            addToCart={addToCart} 
+            btnLookDatail={true}
+          />
         ))}
       </div>
     </div>

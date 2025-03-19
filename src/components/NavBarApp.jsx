@@ -5,7 +5,8 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
-const Navbar = () => {
+//!usar siemore className
+const NavBarApp = () => {
   const { cart } = useCart();
 
   return (
@@ -46,5 +47,5 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBarApp;
 
