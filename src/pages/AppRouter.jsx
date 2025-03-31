@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import  NavBarApp  from "../components/NavBarApp";
 import Home from "./Home";
 import Products from "./Products";
 import ProductDetail from "./ProductDetail";
 import ShoppingCart from "./ShoppingCart";
 import Checkout from "./Checkout";
 import NotFound from "./NotFound";
-import  NavBarApp  from "../components/NavBarApp";
 
 
-function AppRouter() {
+export default function AppRouter() {
   return (
     <BrowserRouter>
       <NavBarApp />
@@ -23,4 +23,3 @@ function AppRouter() {
     </BrowserRouter>
   );
 }
-export default AppRouter;

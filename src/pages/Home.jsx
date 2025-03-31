@@ -3,10 +3,10 @@
 import { Link } from "react-router-dom";
 
 //!Los React Components son funciones.
-const Home = () => {
-  //?Aca podras declarar constantes, hacer peticiones HTTP... Necesario para el renderizado de este componente
+export default function Home() {
+  //Aca podras declarar constantes, hacer peticiones HTTP... Necesario para el renderizado de este componente
   
-  //?Los React Components retonan XJS a renderizar
+  //Los React Components retonan XJS a renderizar
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-6 pt-[18vh]">
       <h1 className="text-4xl font-bold text-gray-800 mb-4">
@@ -40,4 +40,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+

@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
 //!usar siemore className
-const NavBarApp = () => {
+export default function NavBarApp () {
   const { cart } = useCart();
 
   return (
@@ -15,21 +15,22 @@ const NavBarApp = () => {
       
     <div className="flex flex-row justify-between items-center">
      
-     <div className="flex gap-1 justify-center items-center">
+     <div className="flex gap-1 items-center">
+      
         <span className="font-extrabold italic tracking-widest p-4 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
             SHOPPING CART 
         </span>
         <FaShoppingCart className="text-blue-600 text-4xl" />
      </div>
 
-      <div className="flex gap-2 justify-center items-center">
+      {/* <div className="flex gap-1 items-center">
         <Box sx={{ width: 500, maxWidth: '100%' }}>
             <TextField fullWidth label="Buscar Producto" id="fullWidth" />
         </Box>
           <button >
             <FaSearch className="text-gray-500 text-4xl hover:text-blue-500" />
           </button>
-      </div>
+      </div> */}
      
   
       
@@ -47,5 +48,5 @@ const NavBarApp = () => {
   );
 };
 
-export default NavBarApp;
+
 
